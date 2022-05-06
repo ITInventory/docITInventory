@@ -3,102 +3,131 @@
  <main class="main"> 
     <h1 class="title">Django Content</h1>
     <br>
-    <p>On this page its tell the content of backend code of the project. The backend code use 3 file and a template folder .
+    <p>On this page its tell the content of backend code of the project. The backend code use 4 file and a template folder .
     </p>
+    <p>The list of file use in the project is :</p>
+    <ul>
+        <li>main/views.py
+            <ul><li>
+                This file store the logic function of the project.
+            </li></ul>
+        </li>
+        <li>main/models.py
+            <ul><li>
+                This file store the database main schema and table schema.
+            </li></ul>
+        </li>
+        <li>main/urls.py
+            <ul><li>
+                This file store the url routing path of the project.
+            </li></ul>
+        </li>
+         <li>main/admin.py
+            <ul><li>
+                This file store the logic and the look of admin panel page.
+            </li></ul>
+        </li>
+        <li>specification/models.py
+              <ul><li>
+                This file store the database specification schema and table schema.
+            </li></ul>
+        </li>
+    </ul>
     <br>
-    <h3 class="title">The local python environment setup</h3>
+    <p>All the html file must be store in main/templates folder due to django render the file from that directory.</p>
     <br>
-    <p>To create the local python environment setup, the device need have python language install. To check if the device has the python language install, run this code on cmd to check whatever the python installed in the device :</p>
+    <p>For any javascript or css file need to store in the main/static folder and must be  using the html tag "{% load static %}"  in the start of the html file. </p>
     <br>
-    <div class="command">
-        <p>python --version</p>
-    </div>
-    <br>
-    <p>If the python already install on the device, use this command to create the virtual environment :</p>
-    <br>
-    <div class="command">
-        <p>pip install virtualenv</p>
-    </div>
-    <br>
-    <p>For the next step, run these command :</p>
-    <br>
-      <div class="command">
-        <p>virtualenv env</p>
-    </div>
-    <br>
-    <p>The file directory should have env folder in its. Then we need to activate
-         the virtual environment for use to install django package and etc. To activate
-          the virtual environment we need to run these command :</p>
-    <br>
-        <div class="command">
-            <p class="comment">*note : the cmd must be in the project directory for executing this process</p>
-            <br>
-            <p>myenv\Scripts\activate</p>
-            <br>
-            <p class="comment">*If want to deactivate the environment just run "deactivate" command on the cmd</p>
-        </div>
-    <br>
-     <h3 class="title">The Python Package Installation</h3>
-        <br>
-        <p>As we activate the environment we need to install the package for us to run the django command.
-             First, we need to create a require.txt file for the list of package that we want to install.
-            The content of the require.txt file is as show below  </p>
-        <br>
-         <div class="command" style="overflow: scroll;">
-            <div v-for="x of  requireP">
-            <p class="comment">{{x.data}}</p>
-               
-            </div>
-          
-            <br>
-           
-        </div>
-
-        <p>Then we will run these command to install the package :</p>
-        <br>
-        <div class="command">
-            <p>py -m pip install -r require.txt</p>
-        </div>
-        <br>
-        <p>Then just clone the project from github using the cmd line : </p>
-    <br>
-    <div class="command">
-        <p>git clone https://github.com/ITInventory/ITInventory-System.git</p>
-    </div>
-    <br>
-    <h3 class="title">Run the development environment</h3>
-    <br>
-    <p>To test run the project, we need to go the project directory that has manage.py file for us to test run the development environment. We use the CD command to go the target directory via cmd</p>
-    <br>
-    <div class="command">
-            <p>cd ITInventory-System</p>
-            <br>
-            <p>cd itinventory</p>
-    </div>
-    <br>
-    <p>Then we run the command :</p>
-    <br>
-     <div class="command">
-            <p>py manage.py runserver</p>
-            
-    </div>
-    <br>
-    <p>its will run the a development server for development purpose</p>
+    <p>For any type of media such as file or image create by the website  its must be store in itinventory/media. <span class="info">* can refer on the \itinventory\settings.py file for futher enquire.</span> </p>
+ <br>
+    <p> For main/views.py file its contain 18 section code block and divide with python comment code #.
+         The list of the section can be seen below :  </p>
+    <ul>
+        <li>Login function</li>
+        <li>Logout</li>
+        <li>Homepage</li>
+        <li>Computer Page</li>
+        <li>Laptop Page</li>
+        <li>Network Hardware Page</li>
+        <li>User Page</li>
+        <li>Loan Page</li>
+        <li>IP Page</li>
+        <li>Software page</li>
+        <li>History log</li>
+        <li>QR PC</li>
+        <li>QR Laptop</li>
+        <li>Upload qr image for PC</li>
+        <li>Upload qr image for Laptop</li>
+        <li>Download file</li>
+        <li>Create PDF</li>
+        <li>Mass upload page</li>
     
+    </ul>
+    <p> For main/model.py file its contains 8 section code block and divide with python comment code #.
+         The list of the section can be seen below :</p>
+    <ul>
+        <li>Computer table</li>
+        <li>Laptop table</li>
+        <li>NetworkHardware table</li>
+        <li>UserAsset table</li>
+        <li>Loan table</li>
+        <li>IP table</li>
+        <li>softwareUser table</li>
+        <li>loghistory table</li>
+    </ul>
+    <br>
+    <p>For main/urls.py file its contains 14 section code block and divide with python comment code #.
+         The list of the section can be seen below :</p>
+    <ul>
+        <li>Login path</li>
+        <li>Logout path</li>
+        <li>Homepage path</li>
+        <li>Computer path</li>
+        <li>Laptop path</li>
+        <li>Network Hardware path</li>
+        <li>User path</li>
+        <li>Loan path</li>
+        <li>IP path</li>
+        <li>Software path</li>
+        <li>History log path</li>
+        <li>Download file path</li>
+        <li>Create PDF path</li>
+        <li>Mass upload page path</li>
+    </ul>
+    <br>
+    <p>For main/admin.py file its contain 2 section, that is the model look section and model registration section.</p>
+    <br>
+    <p>For main/model.py file its contains 20 section code block and divide with python comment code #.
+         The list of the section can be seen below :</p>
+          <ul>
+        <li>Brand table</li>
+        <li>ModelPC table</li>
+        <li>Modellaptop table</li>
+        <li>ModelPCMachine table</li>
+        <li>Processor_type table</li>
+        <li>Software table</li>
+        <li>softwareUser table</li>
+        <li>Ram_type table</li>
+        <li>Microsoft_office table</li>
+        <li>Location table</li>
+        <li>Windows table</li>
+        <li>vendor table</li>
+        <li>Hardware_type table</li>
+        <li>NetworkAsset_brand table</li>
+        <li>Asset_running_number table</li>
+        <li>NetworkAsset_vendor table</li>
+        <li>NetworkAsset_location table</li>
+        <li>NetworkAsset_block table</li>
+        <li>storagevalue table</li>      
+    </ul>
+    <br>
  </main>
 </template>
 <script>
     export default {
          data() {
   return {
-    requireP : [ {data:'amqp==5.1.0'}, {data:'asgiref==3.5.0'}, {data:'billiard==3.6.4.0'}, {data:'celery==5.0.0'}, {data:'click==8.1.2'},
-     {data:'click-didyoumean==0.3.0'},{data:'click-repl==0.2.0'}, {data:'colorama==0.4.4'}, {data:'cv==1.0.0'}, {data:'Django==4.0.2'},
-      {data:'django-celery-beat==2.1.0'}, {data:'django-celery-results==2.0.0'},{data:'django-timezone-field==4.2.3'}, {data:'fpdf==1.7.2'},
-       {data:'gunicorn==20.1.0'}, {data:'kombu==5.2.4'}, {data:'mssql-django==1.1.2'}, {data:'numpy==1.22.2'},
-       {data:'opencv-python==4.5.5.64'}, {data:'overlap==0.1.0'}, {data:'pandas==1.4.1'}, {data:'Pillow==9.1.0'},{data:'prompt-toolkit==3.0.28'},
-        {data:'PyMuPDF==1.19.6'},{data:'pyodbc==4.0.32'}, {data:'PyPDF2==1.26.0'},{data:'pypng==0.0.21'}, {data:'PyQRCode==1.2.1'},
-         {data:'python-crontab==2.6.0'}, {data:'python-dateutil==2.8.2'},{data:'pytz==2021.3'}, {data:'redis==3.5.3'}, 
-         {data:'reportlab==3.6.9'}, {data:'six==1.16.0'}, {data:'sqlparse==0.4.2'}, {data:'tzdata==2022.1'}, {data:'vine==5.0.0'}, {data:'wcwidth==0.2.5'}]
+   
   }
 }
     }
