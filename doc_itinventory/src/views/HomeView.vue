@@ -7,7 +7,7 @@
     <br>
     <p>This project uses the Django web framework for the backend side and use vanilla HTML, CSS and Javascript for the frontend side.</p>
     <br>
-    <p>This documentation will be divide into 4 section : </p>
+    <p>This documentation will be divide into 3 section : </p>
     <ul>
       <li>Django setup
         <ul>
@@ -26,12 +26,7 @@
           <li>This section will explain about on how to setup the Server host side of the system </li>
         </ul>
       </li>
-      <br>
-      <li>Documentation setup
-        <ul>
-          <li>This section will explain about on how to setup the Documentation and apply change done to the source code</li>
-        </ul>
-      </li>
+
     </ul>
 
 

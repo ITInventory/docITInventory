@@ -65,6 +65,46 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/Django/Main_PY/Computer_Page.vue')
+    },
+    {
+      path: '/Host_intro',
+      name: 'Host_intro',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Hosting/Intro_host.vue')
+    },
+    {
+      path: '/Host_install',
+      name: 'Host_install',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Hosting/Install_pack.vue')
+    },
+    {
+      path: '/Host_Gunicorn',
+      name: 'Host_Gunicorn',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Hosting/Host_Gunicorn.vue')
+    },
+    {
+      path: '/Host_Nginx',
+      name: 'Host_Nginx',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Hosting/Host_Nginx.vue')
+    },
+    {
+      path: '/Host_Trouble',
+      name: 'Host_Trouble',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Hosting/Host_Trouble.vue')
     }
     
   ]

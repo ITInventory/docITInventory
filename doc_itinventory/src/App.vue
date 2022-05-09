@@ -50,7 +50,19 @@ import HelloWorld from '@/components/HelloWorld.vue'
           <router-link to="/django_setup">About</router-link>
         </div>
       </div>
-      <router-link to="/">Home</router-link>
+      <div class="dropdown">
+        <button id="HostNav" class="dropbtn"  @click="toggleDropDownHost()">Server hosting setup</button>
+        <div id="myDropdown" class="dropdown-content" :class="{show:IsHost  }">
+          <router-link to="/Host_intro">Introduction</router-link> 
+          <router-link to="/Host_install">Install Package</router-link> 
+          <router-link to="/Host_Gunicorn">Create a Gunicorn 
+            <br> systemd Service File 
+            Pass to
+             Gunicorn</router-link> 
+           <router-link to="/Host_Nginx">Configure Nginx</router-link> 
+           <router-link to="/Host_Trouble">Troubleshooting Nginx and Gunicorn</router-link> 
+        </div>
+      </div>
     
 
 </div>
@@ -202,7 +214,7 @@ body {
   left: 40px;
   padding: 6px 8px 6px 16px;
   font-size: 18px;
-  width: 1100px;
+  width: 1000px;
   font-size: 16px;
   border-radius: 25px;
   max-height: 300px;
@@ -260,6 +272,12 @@ methods :
   ,
   toggleDropDownMainContent(){
     this.isConMainPY = !this.isConMainPY
+  },
+  toggleDropDownHost(){
+    this.IsHost = !this.IsHost
+  },
+  toggleDropDownDoc(){
+    this.IsDocument = !this.IsDocument
   }
 }
 }
